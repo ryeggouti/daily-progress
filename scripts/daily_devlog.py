@@ -105,6 +105,9 @@ def main():
     text = LOG.read_text(encoding='utf-8') if LOG.exists() else '# Development Log\n'
     days = [today - timedelta(days=n) for n in (3, 2, 1)]
     days = [day for day in days if not exists(text, day)]
+    snapshot = os.environ.get('INCLUDE_TODAY') == 'true'
+    if snapshot and f'<!-- devlog-snapshot:{today} -->' not in text:
+        days.append(today)
     if not days:
         print('All recent dates already logged.')
         return
@@ -117,7 +120,13 @@ def main():
             continue
         summary = summarize(commits)
         note = '\n\n_Automatically recorded from GitHub commits; titles are original commit messages._'
-        entries.insert(0, f'<!-- devlog:{day} -->\n### {day}\n\n{summary}{note}\n\n')
+        if day == today:
+            stamp = datetime.now(TZ).isoformat(timespec='seconds')
+            entry = (f'<!-- devlog-snapshot:{day} -->\n### {day} — activity snapshot\n\n'
+                     f'_As of {stamp}; later commits are not included._\n\n{summary}{note}\n\n')
+        else:
+            entry = f'<!-- devlog:{day} -->\n### {day}\n\n{summary}{note}\n\n'
+        entries.insert(0, entry)
     if entries:
         # Preserve the manual log verbatim beneath the generated entries.
         LOG.write_text(''.join(entries) + text, encoding='utf-8')

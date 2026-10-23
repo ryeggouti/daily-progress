@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '23 2 * * *'
   workflow_dispatch:
+    inputs:
+      include_today:
+        description: Record a snapshot of today's activity
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -21,6 +26,7 @@ jobs:
       - name: Record actual commits
         env:
           GH_TOKEN: ${{ github.token }}
+          INCLUDE_TODAY: ${{ github.event_name == 'workflow_dispatch' && inputs.include_today && 'true' || 'false' }}
         run: python3 scripts/daily_devlog.py
       - name: Commit devlog only
         env:

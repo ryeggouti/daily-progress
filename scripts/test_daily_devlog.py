@@ -2,9 +2,29 @@ import unittest
 from datetime import date
 from unittest.mock import patch
 import daily_devlog as d
+import os
+import tempfile
+from pathlib import Path
 
 
 class DevlogTests(unittest.TestCase):
+    def test_today_snapshot_preserves_manual_log_and_is_idempotent(self):
+        today = d.datetime.now(d.TZ).date()
+        manual = f'# Development Log\n\n### {today:%B} {today.day}, {today.year}\nManual notes.\n'
+        with tempfile.TemporaryDirectory() as directory:
+            log = Path(directory) / 'DEVLOG.md'
+            log.write_text(manual)
+            with patch.object(d, 'LOG', log), patch.dict(os.environ, {'INCLUDE_TODAY': 'true'}), \
+                 patch.object(d, 'pages', return_value=[]), \
+                 patch.object(d, 'collect', side_effect=lambda repos, day: [{}] if day == today else []), \
+                 patch.object(d, 'summarize', return_value='- A real source commit.'):
+                d.main()
+                first = log.read_text()
+                self.assertIn(f'<!-- devlog-snapshot:{today} -->', first)
+                self.assertTrue(first.endswith(manual))
+                d.main()
+                self.assertEqual(log.read_text(), first)
+
     def test_casablanca_offset_and_ramadan(self):
         # Use installed IANA rules rather than assuming future government policy.
         for day in (date(2026, 2, 15), date(2026, 3, 22), date(2026, 10, 23)):

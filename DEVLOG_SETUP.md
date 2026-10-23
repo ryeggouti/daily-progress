@@ -7,6 +7,10 @@ uses the standard Ubuntu GitHub-hosted runner.
 ## Schedule and content
 
 Runs daily at 02:23 UTC, or manually from Actions > Daily devlog > Run workflow.
+For an immediate check, enable **include_today** when running manually. This adds
+one timestamped activity snapshot for today, preserving any manual entry. Repeating
+the option on the same day skips that snapshot; normal completed-day logging remains
+separate. Only actual source commits can create a snapshot.
 Uses Africa/Casablanca calendar dates and checks the previous three completed days.
 It lists your public, personally owned repositories and all existing branches,
 excluding daily-progress. Only commits attributed to ryeggouti are recorded.
