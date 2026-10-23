@@ -37,6 +37,38 @@ class DevlogTests(unittest.TestCase):
              patch.object(d.LOG.__class__, 'write_text', side_effect=AssertionError('no write')):
             d.main()
 
+    def test_commit_log_escapes_titles_and_links_sources(self):
+        entry = {'repo': 'ryeggouti/example', 'sha': 'a' * 40,
+                 'title': '<script> [bad](https://example.org)\nline',
+                 'files': 3, 'partial': False, 'additions': 12, 'deletions': 4}
+        text = d.summarize([entry])
+        self.assertIn('https://github.com/ryeggouti/example/commit/' + 'a' * 40, text)
+        self.assertIn('(3 files; +12/-4 lines)', text)
+        self.assertNotIn('<script>', text)
+        self.assertNotIn('[bad]', text)
+        self.assertNotIn('\n', text)
+
+    def test_author_filter_boundaries_and_shared_branches(self):
+        day = date(2026, 10, 23)
+        start, end = d.bounds(day)
+        def commit(sha, login, stamp):
+            return {'sha': sha, 'author': {'login': login}, 'commit': {
+                'committer': {'date': stamp.isoformat()}, 'message': 'Add feature'}}
+        commits = [commit('a' * 40, d.OWNER, start),
+                   commit('b' * 40, 'someone-else', start),
+                   commit('c' * 40, d.OWNER, end)]
+        def fake_pages(path, **kwargs):
+            return [{'name': 'main'}, {'name': 'feature'}] if path.endswith('/branches') else commits
+        detail = {'parents': [{}], 'files': [{'filename': 'image.png'}],
+                  'stats': {'additions': 0, 'deletions': 0}}
+        with patch.object(d, 'pages', side_effect=fake_pages), \
+             patch.object(d, 'gh', return_value=detail) as gh:
+            result = d.collect([{'full_name': 'ryeggouti/example', 'private': False,
+                                 'size': 1}], day)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0]['sha'], 'a' * 40)
+        self.assertEqual(gh.call_count, 1)
+
 
 if __name__ == '__main__':
     unittest.main()

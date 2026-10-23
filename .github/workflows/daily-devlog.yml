@@ -18,19 +18,19 @@ jobs:
         with:
           ref: main
           persist-credentials: false
-      - name: Generate summaries
+      - name: Record actual commits
         env:
           GH_TOKEN: ${{ github.token }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python3 scripts/daily_devlog.py
       - name: Commit devlog only
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           if git diff --quiet -- DEVLOG.md; then exit 0; fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config user.name 'ryeggouti'
+          git config user.email '242990324+ryeggouti@users.noreply.github.com'
           git add -- DEVLOG.md
-          git commit -m 'docs: summarize recent development activity'
+          TZ=Africa/Casablanca git commit -m 'docs: record recent development activity'
+          echo 'Automated activity log, attributed to ryeggouti; only actual source activity is recorded.' >> "$GITHUB_STEP_SUMMARY"
           AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
           git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $AUTH" push origin HEAD:main
