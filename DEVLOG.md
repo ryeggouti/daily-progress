@@ -2,6 +2,13 @@
 
 A record of my programming, data analysis, and machine learning projects.
 
+### October 24, 2026
+**Project: Stork Flight**
+
+- Documented cross-device testing for the browser and Android versions.
+- Recorded usability issues involving enlarged font settings and online multiplayer.
+- Identified future improvements for accessibility, responsive controls, and multiplayer testing.
+
 ### October 23, 2026
 **Project: Morocco Drought**
 
