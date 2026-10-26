@@ -1,3 +1,10 @@
+<!-- devlog:2026-10-25 -->
+### 2026-10-25
+
+- [ryeggouti/stork-flight-app@e894001](https://github.com/ryeggouti/stork-flight-app/commit/e8940013a818bde70f5d1f0165e21f8ce17a6696): Fix offline fallback and isolate Stork Flight caches (3 files; +168/-9 lines)
+
+_Automatically recorded from GitHub commits; titles are original commit messages._
+
 # Development Log
 
 A record of my programming, data analysis, and machine learning projects.
