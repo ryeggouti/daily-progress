@@ -1,3 +1,10 @@
+<!-- devlog:2026-10-27 -->
+### 2026-10-27
+
+- [ryeggouti/stork-flight@43bff7d](https://github.com/ryeggouti/stork-flight/commit/43bff7dd6b4e723234f58427ea4025209d5d45c5): Update controls section in README (1 files; +1/-0 lines)
+
+_Automatically recorded from GitHub commits; titles are original commit messages._
+
 <!-- devlog:2026-10-26 -->
 ### 2026-10-26
 
