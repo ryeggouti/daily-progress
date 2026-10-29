@@ -1,3 +1,12 @@
+<!-- devlog:2026-10-28 -->
+### 2026-10-28
+
+- [ryeggouti/ryeggouti@d45ccc5](https://github.com/ryeggouti/ryeggouti/commit/d45ccc56d2cd9493fd896b27f08a634bc7c6b618): Add contributor badge to README (1 files; +2/-0 lines)
+- [ryeggouti/ryeggouti.github.io@c01c439](https://github.com/ryeggouti/ryeggouti.github.io/commit/c01c439f40f813168c272de58e0b775daf0bc970): Add contributor badge to the header (1 files; +17/-3 lines)
+- [ryeggouti/stork-flight@03ecb43](https://github.com/ryeggouti/stork-flight/commit/03ecb4320b3a1cf6cf3ce0f9986417e1029a3126): Add contributor badge to README (1 files; +2/-0 lines)
+
+_Automatically recorded from GitHub commits; titles are original commit messages._
+
 <!-- devlog:2026-10-27 -->
 ### 2026-10-27
 
