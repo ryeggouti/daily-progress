@@ -1,3 +1,20 @@
+<!-- devlog:2026-10-29 -->
+### 2026-10-29
+
+- [ryeggouti/applytrack@1481c9c](https://github.com/ryeggouti/applytrack/commit/1481c9ce9a9cbf9d3e7f3c2637fc3428b58d0250): Resolve heading dates and require deadline review before research transfer (7 files; +335/-14 lines)
+- [ryeggouti/applytrack@161c089](https://github.com/ryeggouti/applytrack/commit/161c089878ad36dc2d6c1729440d3009ce4523cd): Add ApplyTrack logo favicon with versioned Pages URL (3 files; +8/-2 lines)
+- [ryeggouti/applytrack@23f5bc9](https://github.com/ryeggouti/applytrack/commit/23f5bc916b5783ca7bdf87706dd25bb3ea0b3941): Autofill sourced fee\-waiver availability while preserving request status (7 files; +55/-8 lines)
+- [ryeggouti/applytrack@37b1854](https://github.com/ryeggouti/applytrack/commit/37b1854316f011c4c3d7e181b072ef6a2b993d35): Add MIT License to the project (1 files; +21/-0 lines)
+- [ryeggouti/applytrack@3f18ba9](https://github.com/ryeggouti/applytrack/commit/3f18ba96258200f285d9fef637d3e3864446e394): Add research autofill functionality for college form (1 files; +303/-0 lines)
+- [ryeggouti/applytrack@4048824](https://github.com/ryeggouti/applytrack/commit/404882469f018fbf120a1ad3b4532f0b0c909b5c): Refactor index\.html structure and add new scripts (1 files; +314/-23 lines)
+- [ryeggouti/applytrack@5c63b9d](https://github.com/ryeggouti/applytrack/commit/5c63b9de35f89c077d574141bb677cb9c86bfcc2): Collapse application research notes and add dismissible notifications (2 files; +16/-2 lines)
+- [ryeggouti/applytrack@8848b9f](https://github.com/ryeggouti/applytrack/commit/8848b9f7339617b96d4e61e1f1ae872f424071f7): Fix research autofill and admission deadline extraction (12 files; +929/-299 lines)
+- [ryeggouti/applytrack@a4830e1](https://github.com/ryeggouti/applytrack/commit/a4830e18a42396b347c293eb629cd0771db2ba50): Update waivers array to include 'Unknown' status (1 files; +1/-1 lines)
+- [ryeggouti/applytrack@b58c0f1](https://github.com/ryeggouti/applytrack/commit/b58c0f1e70a41f0d6a3c4dd6047b6346ef26d7a9): Add workspace navigation, deadline and document views, and creator About page (7 files; +149/-7 lines)
+- [ryeggouti/applytrack@df8a7ab](https://github.com/ryeggouti/applytrack/commit/df8a7abb68ab53870762264d5e265ee58dc60ee4): Add first\-visit welcome tour and animated returning greetings (6 files; +126/-3 lines)
+
+_Automatically recorded from GitHub commits; titles are original commit messages._
+
 <!-- devlog:2026-10-28 -->
 ### 2026-10-28
 
