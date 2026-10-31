@@ -1,3 +1,11 @@
+<!-- devlog:2026-10-30 -->
+### 2026-10-30
+
+- [ryeggouti/applytrack@3ed0a0d](https://github.com/ryeggouti/applytrack/commit/3ed0a0d7123c034c6962a2951eb04298a56dd673): Add optional local profiles and greeting\-first personalized arrival (8 files; +132/-12 lines)
+- [ryeggouti/applytrack@cf63bc9](https://github.com/ryeggouti/applytrack/commit/cf63bc9a007b4b04652fe3d73746693a0fb67e71): Align arrival greeting with content and remove Continue button (4 files; +10/-6 lines)
+
+_Automatically recorded from GitHub commits; titles are original commit messages._
+
 <!-- devlog:2026-10-29 -->
 ### 2026-10-29
 
