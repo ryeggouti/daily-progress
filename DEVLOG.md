@@ -1,3 +1,20 @@
+<!-- devlog:2026-10-31 -->
+### 2026-10-31
+
+- [ryeggouti/applytrack@4591477](https://github.com/ryeggouti/applytrack/commit/4591477ca008a1857773943e7aa267c46cca5e2c): Keep GitHub Pages and move research API to Netlify (2 files; +18/-5 lines)
+- [ryeggouti/applytrack@4704968](https://github.com/ryeggouti/applytrack/commit/4704968003995b8f8da0892aa521f561d7bf59a1): Disable duplicate research for colleges with saved requirements (3 files; +16/-2 lines)
+- [ryeggouti/applytrack@5b406c7](https://github.com/ryeggouti/applytrack/commit/5b406c7305e629e814edead9169f67242ef743f6): Polish workspace hierarchy and fix dark About cards (4 files; +40/-13 lines)
+- [ryeggouti/applytrack@6729ea4](https://github.com/ryeggouti/applytrack/commit/6729ea46b638b2314601e84a85c293e65641a270): Add independent Netlify hosting with Node research functions (10 files; +106/-1 lines)
+- [ryeggouti/applytrack@9f23be2](https://github.com/ryeggouti/applytrack/commit/9f23be266979f8f6a7528fc284189baad48f3243): Replace appearance menu with sun and moon toggle (3 files; +17/-7 lines)
+- [ryeggouti/applytrack@adfddb4](https://github.com/ryeggouti/applytrack/commit/adfddb4c7b083b94c3f04cf35656cede9d9f900f): Add weekly planning, tasks, essays, recommendations and funding trackers (12 files; +297/-13 lines)
+- [ryeggouti/applytrack@b78db4b](https://github.com/ryeggouti/applytrack/commit/b78db4beac4b3bc89af75ae1177b6cc530382d36): Fix date\-only deadlines, refresh countdowns and animate theme icon (6 files; +82/-11 lines)
+- [ryeggouti/applytrack@c1f7303](https://github.com/ryeggouti/applytrack/commit/c1f730388f4320dcd56fa14ee9ab43a6e219cce4): Add files via upload (1 files; +1/-0 lines)
+- [ryeggouti/applytrack@e2093ac](https://github.com/ryeggouti/applytrack/commit/e2093acc138a2b8090b266498301f58fe809c375): Add persistent dark mode and halve welcome reveal timing (5 files; +55/-7 lines)
+- [ryeggouti/applytrack@fb4f698](https://github.com/ryeggouti/applytrack/commit/fb4f698a677abd199f1874bf1d5cc8858b103715): Prepare independent Node\.js deployment on Render free plan (5 files; +65/-1 lines)
+- [ryeggouti/applytrack@fe95d15](https://github.com/ryeggouti/applytrack/commit/fe95d15356a77aad9550735eae48034e3bf1a8c9): Simplify workspace navigation and add private calendar snapshots (8 files; +119/-4 lines)
+
+_Automatically recorded from GitHub commits; titles are original commit messages._
+
 <!-- devlog:2026-10-30 -->
 ### 2026-10-30
 
