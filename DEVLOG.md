@@ -1,3 +1,14 @@
+<!-- devlog:2026-11-01 -->
+### 2026-11-01
+
+- [ryeggouti/applytrack@16414c6](https://github.com/ryeggouti/applytrack/commit/16414c6e0169fca423d56a1777407446ac65cd7b): Add sourced essay prompt library and shared activity planning (20 files; +1330/-57 lines)
+- [ryeggouti/applytrack@423da0a](https://github.com/ryeggouti/applytrack/commit/423da0a24bdb5abe87197acf6918dd6ecbb0ca77): Improve research coverage and focused task and essay planning (20 files; +229/-53 lines)
+- [ryeggouti/applytrack@4f4cdf6](https://github.com/ryeggouti/applytrack/commit/4f4cdf6f2eabdbe4e1b60cdba7f1cccf580fe5db): Read automatic Amherst alternatives and isolate QuestBridge evidence (13 files; +244/-32 lines)
+- [ryeggouti/applytrack@64129f2](https://github.com/ryeggouti/applytrack/commit/64129f29077c3e69b0aa136bac1df059cd5e7c17): Improve research source coverage and expose verification gaps (14 files; +324/-58 lines)
+- [ryeggouti/applytrack@bae051c](https://github.com/ryeggouti/applytrack/commit/bae051c374e408148a9a4cbfb605b008868bdadd): Add deadline review, local recovery and editing safeguards (14 files; +290/-29 lines)
+
+_Automatically recorded from GitHub commits; titles are original commit messages._
+
 <!-- devlog:2026-10-31 -->
 ### 2026-10-31
 
