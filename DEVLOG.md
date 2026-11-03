@@ -1,3 +1,10 @@
+<!-- devlog:2026-11-02 -->
+### 2026-11-02
+
+- [ryeggouti/applytrack@1ffb55f](https://github.com/ryeggouti/applytrack/commit/1ffb55fe988e1ce96101e93083ff8ca785ff1787): Preserve application deadline layouts and exclude other pathway dates (11 files; +308/-26 lines)
+
+_Automatically recorded from GitHub commits; titles are original commit messages._
+
 <!-- devlog:2026-11-01 -->
 ### 2026-11-01
 
